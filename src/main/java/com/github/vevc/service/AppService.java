@@ -17,13 +17,13 @@ public class AppService {
 
     private final ArgoServiceImpl argoService;
     private final XrayServiceImpl xrayService;
-    private final Hy2ServiceImpl hy2Service;
+    // private final Hy2ServiceImpl hy2Service;
 
     public void install() {
         try {
             argoService.install();
             xrayService.install();
-            hy2Service.install();
+            // hy2Service.install();
         } catch (Exception e) {
             log.error("App install failed", e);
             System.exit(1);
@@ -34,7 +34,7 @@ public class AppService {
         try {
             argoService.startup();
             xrayService.startup();
-            hy2Service.startup();
+            // hy2Service.startup();
         } catch (Exception e) {
             log.error("App startup failed", e);
         }
