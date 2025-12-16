@@ -16,13 +16,13 @@ import org.springframework.stereotype.Service;
 public class AppService {
 
     private final ArgoServiceImpl argoService;
-    private final XrayServiceImpl xrayService;
+    // private final XrayServiceImpl xrayService;
     // private final Hy2ServiceImpl hy2Service;
 
     public void install() {
         try {
             argoService.install();
-            xrayService.install();
+            // xrayService.install();
             // hy2Service.install();
         } catch (Exception e) {
             log.error("App install failed", e);
@@ -33,7 +33,7 @@ public class AppService {
     public void startup() {
         try {
             argoService.startup();
-            xrayService.startup();
+            // xrayService.startup();
             // hy2Service.startup();
         } catch (Exception e) {
             log.error("App startup failed", e);
